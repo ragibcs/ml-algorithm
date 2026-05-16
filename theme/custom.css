@@ -1,0 +1,423 @@
+/* ========================================
+   Custom Theme - Purple, Blue & Green
+   ======================================== */
+
+/* Light Theme Variables */
+:root {
+  --primary-purple: #7c3aed;
+  --primary-blue: #2563eb;
+  --primary-green: #059669;
+  --gradient-main: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #059669 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(124,58,237,0.1) 0%, rgba(37,99,235,0.1) 50%, rgba(5,150,105,0.1) 100%);
+  --bg-color: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-color: #1e293b;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+  --sidebar-bg: #f1f5f9;
+  --sidebar-active: rgba(124,58,237,0.1);
+  --code-bg: #f8fafc;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+/* Dark Theme Variables (mdBook "ayu" theme) */
+[data-theme="ayu"],
+html.dark {
+  --primary-purple: #a78bfa;
+  --primary-blue: #60a5fa;
+  --primary-green: #34d399;
+  --gradient-main: linear-gradient(135deg, #a78bfa 0%, #60a5fa 50%, #34d399 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(167,139,250,0.15) 0%, rgba(96,165,250,0.15) 50%, rgba(52,211,153,0.15) 100%);
+  --bg-color: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-color: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --sidebar-bg: #1e293b;
+  --sidebar-active: rgba(167,139,250,0.2);
+  --code-bg: #1e293b;
+}
+
+/* ========================================
+   General Body & Typography
+   ======================================== */
+
+body {
+  font-family: 'Segoe UI', 'Noto Sans Bengali', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+/* ========================================
+   Sidebar
+   ======================================== */
+
+.sidebar {
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--primary-purple);
+  border-radius: 3px;
+}
+
+/* Sidebar chapter headings with gradient */
+.chapter-item > a,
+.chapter-item > span {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.chapter-item > a:hover {
+  color: var(--primary-purple);
+}
+
+.sidebar .active {
+  background-color: var(--sidebar-active);
+  border-left: 3px solid var(--primary-purple);
+}
+
+/* ========================================
+   Main Content
+   ======================================== */
+
+.content main {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+}
+
+/* Headings with gradient underline */
+.content main h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid transparent;
+  border-image: var(--gradient-main) 1;
+  margin-bottom: 1.5rem;
+}
+
+.content main h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-purple);
+  margin-top: 2.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.content main h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-top: 2rem;
+}
+
+.content main h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-top: 1.5rem;
+}
+
+/* Paragraphs */
+.content main p {
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+/* Links */
+.content main a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.content main a:hover {
+  color: var(--primary-purple);
+  border-bottom-color: var(--primary-purple);
+}
+
+/* ========================================
+   Blockquotes
+   ======================================== */
+
+blockquote {
+  background: var(--gradient-subtle);
+  border-left: 4px solid var(--primary-purple);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: normal;
+  box-shadow: var(--shadow-sm);
+}
+
+blockquote p {
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Code Blocks
+   ======================================== */
+
+pre {
+  background-color: var(--code-bg) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.inline-code {
+  background: var(--gradient-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.85rem;
+}
+
+/* Syntax highlighting colors */
+.code-block .hljs-keyword { color: var(--primary-purple); }
+.code-block .hljs-string { color: var(--primary-green); }
+.code-block .hljs-number { color: var(--primary-blue); }
+.code-block .hljs-function { color: #d97706; }
+
+/* ========================================
+   Tables
+   ======================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+table thead {
+  background: var(--gradient-main);
+  color: white;
+}
+
+table thead th {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+table tbody tr:hover {
+  background-color: var(--sidebar-active);
+}
+
+table tbody td {
+  padding: 0.7rem 1rem;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   Lists
+   ======================================== */
+
+.content main ul,
+.content main ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.content main li {
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+  line-height: 1.7;
+}
+
+.content main ul li::marker {
+  color: var(--primary-purple);
+}
+
+.content main ol li::marker {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+/* ========================================
+   Navigation Buttons
+   ======================================== */
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.nav-buttons a,
+.nav-buttons button {
+  background: var(--gradient-main);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+}
+
+.nav-buttons a:hover,
+.nav-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ========================================
+   Search
+   ======================================== */
+
+.searchbar {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color 0.2s ease;
+}
+
+.searchbar:focus {
+  border-color: var(--primary-purple);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.2);
+}
+
+.search-results {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+}
+
+.search-results .result {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.search-results .result:hover {
+  background-color: var(--sidebar-active);
+}
+
+/* ========================================
+   Scroll to Top Button
+   ======================================== */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--gradient-main);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 768px) {
+  .content main {
+    padding: 1rem 1.5rem;
+  }
+
+  .content main h1 {
+    font-size: 1.8rem;
+  }
+
+  .content main h2 {
+    font-size: 1.4rem;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+/* ========================================
+   Math Blocks
+   ======================================== */
+
+.math-block,
+.katex-display {
+  background: var(--gradient-subtle);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+
+@media print {
+  .sidebar,
+  .nav-buttons,
+  .scroll-to-top,
+  .searchbar {
+    display: none !important;
+  }
+
+  .content main {
+    max-width: 100%;
+    padding: 0;
+  }
+}

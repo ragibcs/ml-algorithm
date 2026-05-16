@@ -1,19 +1,23 @@
 [book]
 authors = ["Ragib Hasan"]
 language = "bn"
-multilingual = false
 src = "src"
 title = "ML Algorithm"
+description = "ML Algorithm with Bangla Language"
+text-direction = "ltr"
 
 [build]
 build-dir = "book"
 create-missing = true
+extra-watch-dirs = ["theme"]
 
 [output.html]
 default-theme = "light"
 preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/ragibcs/ml-algorithm"
 edit-url-template = ""
+additional-css = ["theme/custom.css"]
+additional-js = ["theme/custom.js"]
 
 [output.html.search]
 enable = true
