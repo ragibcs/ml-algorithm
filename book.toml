@@ -1,0 +1,25 @@
+[book]
+authors = ["Ragib Hasan"]
+language = "bn"
+multilingual = false
+src = "src"
+title = "ML Algorithm"
+
+[build]
+build-dir = "book"
+create-missing = true
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/ragibcs/ml-algorithm"
+edit-url-template = ""
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-hierarchical-pages = true
+
+[output.html.playground]
+editable = false
+line-numbers = false
