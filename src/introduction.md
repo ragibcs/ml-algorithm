@@ -1,25 +1,34 @@
-# ভূমিকা
+# ML Algorithm Book
 
-এই বইতে Machine Learning-এর বিভিন্ন অ্যালগরিদম সম্পর্কে বাংলায় জানতে পারবেন।
+## ভাষা নির্বাচন / Language Selection
 
-## বিষয়সমূহ
+---
 
-### Supervised Learning
-- [সাপোর্ট ভেক্টর মেশিন (SVM)](./svm.md)
-- [Random Forest](./random-forest.md)
-- [XGBoost](./xgboost.md)
+### 🇧🇩 [বাংলায় পড়ুন (Read in Bangla)](./svm.md)
 
-### Unsupervised Learning
-_(শীঘ্রই আসছে)_
+Machine Learning অ্যালগরিদম সম্পর্কে বাংলায় জানুন।
 
-### Reinforcement Learning
-_(শীঘ্রই আসছে)_
+### 🇬🇧 [Read in English](./en/svm.md)
 
-## নতুন অ্যালগরিদম যোগ করুন
+Learn about Machine Learning algorithms in English.
 
-প্রতিটি অ্যালগরিদম `src/` ফোল্ডারে একটি Markdown ফাইলে রাখা হয়। নতুন অ্যালগরিদম যোগ করতে:
+---
 
-1. `src/` এর ভেতরে নতুন `.md` ফাইল তৈরি করুন (যেমন: `src/linear-regression.md`)
-2. আর্টিকেল লিখুন
-3. `src/SUMMARY.md` তে নতুন এন্ট্রি যোগ করুন
-4. Push করুন — GitHub Actions স্বয়ংক্রিয়ভাবে Deploy করবে
+## বিষয়সমূহ / Topics
+
+| Algorithm | বাংলা | English |
+| --------- | ----- | ------- |
+| SVM | [পড়ুন](./svm.md) | [Read](./en/svm.md) |
+| Random Forest | [পড়ুন](./random-forest.md) | [Read](./en/random-forest.md) |
+| XGBoost | [পড়ুন](./xgboost.md) | [Read](./en/xgboost.md) |
+
+---
+
+## নতুন অ্যালগরিদম যোগ করুন / Add New Algorithm
+
+প্রতিটি অ্যালগরিদম `src/` ফোল্ডারে একটি Markdown ফাইলে রাখা হয়। / Each algorithm is a single `.md` file in the `src/` folder.
+
+1. `src/` তে নতুন `.md` ফাইল তৈরি করুন (বাংলা) / Create a new `.md` file in `src/` (Bangla)
+2. `src/en/` তে ইংরেজি সংস্করণ তৈরি করুন / Create English version in `src/en/`
+3. `src/SUMMARY.md` তে এন্ট্রি যোগ করুন / Add entry in `src/SUMMARY.md`
+4. Push করুন — GitHub Actions স্বয়ংক্রিয়ভাবে Deploy করবে / Push — GitHub Actions auto-deploys

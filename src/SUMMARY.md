@@ -1,13 +1,31 @@
-# সূচিপত্র
+# সূচিপত্র / Table of Contents
 
-[ভূমিকা](./introduction.md)
+[🏠 ভাষা নির্বাচন / Language Selection](./introduction.md)
 
-# Supervised Learning
+---
+
+# 🇧🇩 বাংলা (Bangla)
+
+## Supervised Learning
 
 - [সাপোর্ট ভেক্টর মেশিন (SVM)](./svm.md)
 - [Random Forest](./random-forest.md)
 - [XGBoost](./xgboost.md)
 
-# Unsupervised Learning
+## Unsupervised Learning
 
-# Reinforcement Learning
+## Reinforcement Learning
+
+---
+
+# 🇬🇧 English
+
+## Supervised Learning
+
+- [Support Vector Machine (SVM)](./en/svm.md)
+- [Random Forest](./en/random-forest.md)
+- [XGBoost](./en/xgboost.md)
+
+## Unsupervised Learning
+
+## Reinforcement Learning

@@ -3,7 +3,7 @@ authors = ["Ragib Hasan"]
 language = "bn"
 src = "src"
 title = "ML Algorithm"
-description = "ML Algorithm with Bangla Language"
+description = "Machine Learning Algorithms explained in Bangla and English"
 text-direction = "ltr"
 
 [build]
