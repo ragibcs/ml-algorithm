@@ -1,7 +1,24 @@
 # ভূমিকা
 
-Support Vector Machine (SVM) হলো একটি জনপ্রিয় Supervised Machine Learning Algorithm যা মূলত Classification সমস্যার জন্য ব্যবহার করা হয়। তবে এটি Regression এবং Outlier Detection কাজেও ব্যবহার করা যায়।
+এই বইতে Machine Learning-এর বিভিন্ন অ্যালগরিদম সম্পর্কে বাংলায় জানতে পারবেন।
 
-SVM এমন একটি Decision Boundary তৈরি করে যা বিভিন্ন Class-কে সবচেয়ে ভালোভাবে আলাদা করতে পারে।
+## বিষয়সমূহ
 
-এটি Machine Learning-এর সবচেয়ে শক্তিশালী এবং কার্যকর অ্যালগরিদমগুলোর একটি।
+### Supervised Learning
+- [সাপোর্ট ভেক্টর মেশিন (SVM)](./svm.md)
+- [Random Forest](./random-forest.md)
+
+### Unsupervised Learning
+_(শীঘ্রই আসছে)_
+
+### Reinforcement Learning
+_(শীঘ্রই আসছে)_
+
+## নতুন অ্যালগরিদম যোগ করুন
+
+প্রতিটি অ্যালগরিদম `src/` ফোল্ডারে একটি Markdown ফাইলে রাখা হয়। নতুন অ্যালগরিদম যোগ করতে:
+
+1. `src/` এর ভেতরে নতুন `.md` ফাইল তৈরি করুন (যেমন: `src/linear-regression.md`)
+2. আর্টিকেল লিখুন
+3. `src/SUMMARY.md` তে নতুন এন্ট্রি যোগ করুন
+4. Push করুন — GitHub Actions স্বয়ংক্রিয়ভাবে Deploy করবে
