@@ -7,6 +7,7 @@
 ### Supervised Learning
 - [সাপোর্ট ভেক্টর মেশিন (SVM)](./svm.md)
 - [Random Forest](./random-forest.md)
+- [XGBoost](./xgboost.md)
 
 ### Unsupervised Learning
 _(শীঘ্রই আসছে)_
